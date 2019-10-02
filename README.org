@@ -1,0 +1,436 @@
+FAQ:
+
+Q: How do I see the current state of the game? \\
+A: Remember it or scroll up
+
+Q: But I can see my opponent's hand! \\
+A: Don't look
+
+Q: How do I see the decree card? \\
+A: Just use the Fox on your first turn.
+
+
+Some features:
+
+Error messages
+#+BEGIN_SRC
+Player1: Select card to lead with.
+Options: [5K|1M|8K|4K|6K|10K|2B|8M|3M|10M|9M]
+>>> 6k
+Player2: Select card to follow with.
+Options: [3K|9K|11K]
+>>> 8b
+You must play the same suit as the lead suit.
+Player2: Select card to follow with.
+Options: [3K|9K|11K]
+>>> 13b
+13b is not valid
+Player2: Select card to follow with.
+Options: [3K|9K|11K]
+>>> 9b
+You do not have the 9B.
+Player2: Select card to follow with.
+Options: [3K|9K|11K]
+>>> 11k
+#+END_SRC
+
+Automatic selection when there is only one choice
+#+BEGIN_SRC
+Player1: Select card to lead with.
+Options: [1M|3K|11B|3M|9M|4M|8B|1B]
+Randomly selected: 9M
+Player2: Select card to follow with.
+You have only one choice: 11M. Selecting it.
+#+END_SRC
+
+Sample gameplay, between two bots choosing moves randomly:
+#+BEGIN_SRC
+Player2: Select card to lead with.
+Options: [9K|9B|7B|1K|7K|4K|6B|11M|5M|10K|2B|4B|2K]
+Randomly selected: 5M
+Player2: Use the woodcutter effect?
+Options: [yes|no]
+Randomly selected: no
+Player1: Select card to follow with.
+Options: [1M|3M|4M|10M|9M]
+Randomly selected: 10M
+Player1: Select card to lead with.
+Options: [5K|1M|11K|10B|3K|11B|3M|9M|4M|8B|6K|1B]
+Randomly selected: 5K
+Player1: Use the woodcutter effect?
+Options: [yes|no]
+Randomly selected: yes
+Player1: Select the card to place on the bottom of the draw deck.
+Options: [1M|10B|3K|11B|3M|9M|4M|8K|11K|8B|6K|1B]
+Randomly selected: 8K
+Player2: Select card to follow with.
+Options: [4K|9K|10K|1K|7K|2K]
+Randomly selected: 7K
+Player2: Select card to lead with.
+Options: [9K|11M|9B|7B|1K|4K|6B|10K|2B|4B|2K]
+Randomly selected: 10K
+Player1: Select card to follow with.
+Options: [3K|6K|11K]
+Randomly selected: 11K
+Player1: Select card to lead with.
+Options: [1M|10B|3K|11B|3M|9M|4M|8B|6K|1B]
+Randomly selected: 10B
+Player2: Select card to follow with.
+Options: [6B|2B|9B|7B|4B]
+Randomly selected: 4B
+Player1: Select card to lead with.
+Options: [1M|3K|11B|3M|9M|4M|8B|6K|1B]
+Randomly selected: 6K
+Player2: Select card to follow with.
+Options: [1K|2K|4K|9K]
+Randomly selected: 2K
+Player1: Select card to lead with.
+Options: [1M|3K|11B|3M|9M|4M|8B|1B]
+Randomly selected: 9M
+Player2: Select card to follow with.
+You have only one choice: 11M. Selecting it.
+Player2: Select card to lead with.
+Options: [9K|2B|9B|7B|1K|4K|6B]
+Randomly selected: 6B
+Player1: Select card to follow with.
+Options: [1B|8B|11B]
+Randomly selected: 8B
+Player1: Select card to lead with.
+Options: [1M|3K|11B|3M|1B|4M]
+Randomly selected: 3M
+Player1: Use the fox effect?
+Options: [yes|no]
+Randomly selected: yes
+Player1: Select the card swap with the decree card (2M).
+Options: [1M|3K|11B|1B|4M]
+Randomly selected: 1B
+Player2: Select card to follow with.
+Options: [4K|9K|2B|9B|7B|1K]
+Randomly selected: 9B
+Player2: Select card to lead with.
+Options: [4K|9K|2B|7B|1K]
+Randomly selected: 4K
+Player1: Select card to follow with.
+You have only one choice: 3K. Selecting it.
+Player1: Use the fox effect?
+Options: [yes|no]
+Randomly selected: yes
+Player1: Select the card swap with the decree card (1B).
+Options: [11B|1M|2M|4M]
+Randomly selected: 11B
+Player2: Select card to lead with.
+Options: [2B|7B|1K|9K]
+Randomly selected: 1K
+Player1: Select card to follow with.
+Options: [1B|1M|2M|4M]
+Randomly selected: 1B
+Player2: Select card to lead with.
+Options: [2B|7B|9K]
+Randomly selected: 2B
+Player1: Select card to follow with.
+Options: [1M|2M|4M]
+Randomly selected: 1M
+Player1: Select card to lead with.
+Options: [2M|4M]
+Randomly selected: 2M
+Player2: Select card to follow with.
+Options: [7B|9K]
+Randomly selected: 9K
+Player2: Select card to lead with.
+You have only one choice: 7B. Selecting it.
+Player1: Select card to follow with.
+You have only one choice: 4M. Selecting it.
+Player1: Select card to lead with.
+Options: [10B|6M|10K|9B|7K|3K|6B|11M|5M|8M|3M|8B|1B]
+Randomly selected: 5M
+Player1: Use the woodcutter effect?
+Options: [yes|no]
+Randomly selected: yes
+Player1: Select the card to place on the bottom of the draw deck.
+Options: [10B|6M|11M|10K|9B|7K|4B|3K|6B|8M|3M|8B|1B]
+Randomly selected: 10K
+Player2: Select card to follow with.
+Options: [1M|7M|2M|10M|4M]
+Randomly selected: 4M
+Player1: Select card to lead with.
+Options: [10B|6M|11M|9B|7K|4B|3K|6B|8M|3M|8B|1B]
+Randomly selected: 6B
+Player2: Select card to follow with.
+Options: [5B|2B|11B|7B|3B]
+Randomly selected: 7B
+Player2: Select card to lead with.
+Options: [5K|1M|7M|5B|4K|2M|2B|11B|3B|6K|10M]
+Randomly selected: 5K
+Player2: Use the woodcutter effect?
+Options: [yes|no]
+Randomly selected: no
+Player1: Select card to follow with.
+Options: [3K|7K]
+Randomly selected: 3K
+Player1: Use the fox effect?
+Options: [yes|no]
+Randomly selected: yes
+Player1: Select the card swap with the decree card (9K).
+Options: [10B|6M|11M|9B|7K|4B|8M|3M|8B|1B]
+Randomly selected: 1B
+Player2: Select card to lead with.
+Options: [1M|7M|5B|4K|2M|2B|11B|3B|6K|10M]
+Randomly selected: 4K
+Player1: Select card to follow with.
+Options: [7K|9K]
+Randomly selected: 9K
+Player1: Select card to lead with.
+Options: [10B|6M|11M|9B|7K|8B|4B|8M|3M]
+Randomly selected: 10B
+Player2: Select card to follow with.
+Options: [2B|3B|5B|11B]
+Randomly selected: 5B
+Player2: Use the woodcutter effect?
+Options: [yes|no]
+Randomly selected: no
+Player1: Select card to lead with.
+Options: [6M|11M|9B|7K|8B|4B|8M|3M]
+Randomly selected: 4B
+Player2: Select card to follow with.
+Options: [2B|3B|11B]
+Randomly selected: 11B
+Player2: Select card to lead with.
+Options: [1M|7M|2M|2B|3B|6K|10M]
+Randomly selected: 3B
+Player2: Use the fox effect?
+Options: [yes|no]
+Randomly selected: yes
+Player2: Select the card swap with the decree card (1B).
+Options: [1M|7M|2M|2B|6K|10M]
+Randomly selected: 2M
+Player1: Select card to follow with.
+Options: [8B|9B]
+Randomly selected: 9B
+Player1: Select card to lead with.
+Options: [6M|11M|7K|8B|8M|3M]
+Randomly selected: 11M
+Player2: Select card to follow with.
+Options: [1M|10M]
+Randomly selected: 1M
+Player2: Select card to lead with.
+Options: [7M|2B|10M|6K|1B]
+Randomly selected: 7M
+Player1: Select card to follow with.
+Options: [3M|6M|8M]
+Randomly selected: 6M
+Player2: Select card to lead with.
+Options: [1B|2B|6K|10M]
+Randomly selected: 2B
+Player1: Select card to follow with.
+You have only one choice: 8B. Selecting it.
+Player1: Select card to lead with.
+Options: [7K|3M|8M]
+Randomly selected: 3M
+Player1: Use the fox effect?
+Options: [yes|no]
+Randomly selected: no
+Player2: Select card to follow with.
+You have only one choice: 10M. Selecting it.
+Player2: Select card to lead with.
+Options: [1B|6K]
+Randomly selected: 1B
+Player1: Select card to follow with.
+Options: [7K|8M]
+Randomly selected: 8M
+Player2: Select card to lead with.
+You have only one choice: 6K. Selecting it.
+Player1: Select card to follow with.
+You have only one choice: 7K. Selecting it.
+Player2: Select card to lead with.
+Options: [1M|8K|10B|6M|4K|7B|1K|7K|8M|8B|6K|4B|2K]
+Randomly selected: 4K
+Player1: Select card to follow with.
+Options: [3K|9K|10K|11K]
+Randomly selected: 9K
+Player1: Select card to lead with.
+Options: [5B|11K|2M|10K|3M|1B|10M|4M|3K|6B|9B|11B]
+Randomly selected: 10K
+Player2: Select card to follow with.
+Options: [8K|1K|7K|6K|2K]
+Randomly selected: 7K
+Player1: Select card to lead with.
+Options: [5B|11K|2M|3M|1B|10M|4M|3K|6B|9B|11B]
+Randomly selected: 6B
+Player2: Select card to follow with.
+Options: [4B|7B|8B|10B]
+Randomly selected: 8B
+Player2: Select card to lead with.
+Options: [1M|8K|10B|6M|7B|1K|8M|6K|4B|2K]
+Randomly selected: 2K
+Player1: Select card to follow with.
+Options: [3K|11K]
+Randomly selected: 3K
+Player1: Use the fox effect?
+Options: [yes|no]
+Randomly selected: yes
+Player1: Select the card swap with the decree card (5M).
+Options: [5B|11K|2M|3M|1B|10M|4M|9B|11B]
+Randomly selected: 1B
+Player1: Select card to lead with.
+Options: [5B|11K|3M|10M|4M|5M|2M|9B|11B]
+Randomly selected: 5M
+Player1: Use the woodcutter effect?
+Options: [yes|no]
+Randomly selected: no
+Player2: Select card to follow with.
+Options: [1M|6M|8M]
+Randomly selected: 6M
+Player2: Select card to lead with.
+Options: [1M|8K|10B|7B|1K|8M|6K|4B]
+Randomly selected: 10B
+Player1: Select card to follow with.
+Options: [5B|9B|11B]
+Randomly selected: 11B
+Player1: Select card to lead with.
+Options: [5B|11K|2M|9B|3M|10M|4M]
+Randomly selected: 4M
+Player2: Select card to follow with.
+Options: [1M|8M]
+Randomly selected: 8M
+Player2: Select card to lead with.
+Options: [1M|8K|7B|1K|6K|4B]
+Randomly selected: 4B
+Player1: Select card to follow with.
+Options: [5B|9B]
+Randomly selected: 9B
+Player1: Select card to lead with.
+Options: [5B|11K|2M|3M|10M]
+Randomly selected: 2M
+Player2: Select card to follow with.
+You have only one choice: 1M. Selecting it.
+Player2: Select card to lead with.
+Options: [7B|1K|6K|8K]
+Randomly selected: 6K
+Player1: Select card to follow with.
+You have only one choice: 11K. Selecting it.
+Player1: Select card to lead with.
+Options: [5B|3M|10M]
+Randomly selected: 10M
+Player2: Select card to follow with.
+Options: [7B|1K|8K]
+Randomly selected: 1K
+Player2: Select card to lead with.
+Options: [7B|8K]
+Randomly selected: 7B
+Player1: Select card to follow with.
+You have only one choice: 5B. Selecting it.
+Player1: Use the woodcutter effect?
+Options: [yes|no]
+Randomly selected: yes
+Player1: Select the card to place on the bottom of the draw deck.
+Options: [2B|3M]
+Randomly selected: 3M
+Player2: Select card to lead with.
+You have only one choice: 8K. Selecting it.
+Player1: Select card to follow with.
+You have only one choice: 2B. Selecting it.
+Player1: Select card to lead with.
+Options: [5K|11K|10B|6M|5M|7B|3B|8B|4K|3K|6B|8M|3M]
+Randomly selected: 6B
+Player2: Select card to follow with.
+Options: [1B|5B|9B|11B]
+Randomly selected: 9B
+Player2: Select card to lead with.
+Options: [1M|5B|9K|10K|11B|1K|7K|1B|9M|2K|11M|2M]
+Randomly selected: 10K
+Player1: Select card to follow with.
+Options: [3K|4K|5K|11K]
+Randomly selected: 11K
+Player1: Select card to lead with.
+Options: [5K|10B|6M|5M|7B|3B|8B|4K|3K|8M|3M]
+Randomly selected: 4K
+Player2: Select card to follow with.
+Options: [1K|2K|7K|9K]
+Randomly selected: 1K
+Player2: Select card to lead with.
+Options: [1M|5B|9K|11B|7K|1B|9M|2K|11M|2M]
+Randomly selected: 2K
+Player1: Select card to follow with.
+Options: [3K|5K]
+Randomly selected: 5K
+Player1: Use the woodcutter effect?
+Options: [yes|no]
+Randomly selected: no
+Player1: Select card to lead with.
+Options: [10B|6M|3K|5M|7B|3B|8B|8M|3M]
+Randomly selected: 5M
+Player1: Use the woodcutter effect?
+Options: [yes|no]
+Randomly selected: yes
+Player1: Select the card to place on the bottom of the draw deck.
+Options: [8K|10B|6M|3K|7B|3B|8B|8M|3M]
+Randomly selected: 8B
+Player2: Select card to follow with.
+Options: [1M|2M|9M|11M]
+Randomly selected: 9M
+Player2: Select card to lead with.
+Options: [1M|5B|9K|11B|7K|1B|11M|2M]
+Randomly selected: 9K
+Player1: Select card to follow with.
+Options: [3K|8K]
+Randomly selected: 3K
+Player1: Use the fox effect?
+Options: [yes|no]
+Randomly selected: yes
+Player1: Select the card swap with the decree card (6K).
+Options: [8K|10B|6M|7B|3B|8M|3M]
+Randomly selected: 7B
+Player2: Select card to lead with.
+Options: [1M|5B|11B|7K|1B|11M|2M]
+Randomly selected: 11M
+Player1: Select card to follow with.
+You have only one choice: 8M. Selecting it.
+Player2: Select card to lead with.
+Options: [1M|5B|2M|11B|7K|1B]
+Randomly selected: 11B
+Player1: Select card to follow with.
+You have only one choice: 10B. Selecting it.
+Player2: Select card to lead with.
+Options: [1M|5B|2M|7K|1B]
+Randomly selected: 2M
+Player1: Select card to follow with.
+Options: [3M|6M]
+Randomly selected: 3M
+Player1: Use the fox effect?
+Options: [yes|no]
+Randomly selected: no
+Player1: Select card to lead with.
+Options: [3B|6K|8K|6M]
+Randomly selected: 6M
+Player2: Select card to follow with.
+You have only one choice: 1M. Selecting it.
+Player2: Select card to lead with.
+Options: [1B|5B|7K]
+Randomly selected: 5B
+Player2: Use the woodcutter effect?
+Options: [yes|no]
+Randomly selected: yes
+Player2: Select the card to place on the bottom of the draw deck.
+Options: [1B|7K|7M]
+Randomly selected: 7M
+Player1: Select card to follow with.
+You have only one choice: 3B. Selecting it.
+Player1: Use the fox effect?
+Options: [yes|no]
+Randomly selected: yes
+Player1: Select the card swap with the decree card (7B).
+Options: [6K|8K]
+Randomly selected: 6K
+Player2: Select card to lead with.
+Options: [1B|7K]
+Randomly selected: 1B
+Player1: Select card to follow with.
+You have only one choice: 7B. Selecting it.
+Player2: Select card to lead with.
+You have only one choice: 7K. Selecting it.
+Player1: Select card to follow with.
+You have only one choice: 8K. Selecting it.
+Winner(Player1,Map(Player1 -> 25, Player2 -> 17),None)
+
+Process finished with exit code 0
+#+END_SRC
